@@ -89,6 +89,9 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
+      "/confirm": {
+        "ssr": false
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
@@ -101,7 +104,29 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {}
+  "public": {
+    "supabase": {
+      "url": "https://rprvntzvkuoermvkouvi.supabase.co",
+      "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJwcnZudHp2a3VvZXJtdmtvdXZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY1MTg4MjksImV4cCI6MjA0MjA5NDgyOX0.uskY-e3E_eaEHEp2ZNcidrDE6UYB5XYEu6KvvItrH3c",
+      "redirect": true,
+      "redirectOptions": {
+        "login": "/login",
+        "callback": "/confirm",
+        "exclude": [],
+        "cookieRedirect": false
+      },
+      "cookieName": "sb",
+      "cookieOptions": {
+        "maxAge": 28800,
+        "sameSite": "lax",
+        "secure": true
+      },
+      "clientOptions": {}
+    }
+  },
+  "supabase": {
+    "serviceKey": ""
+  }
 };
 const envOptions = {
   prefix: "NITRO_",
